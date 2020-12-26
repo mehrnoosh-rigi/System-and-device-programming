@@ -74,6 +74,7 @@ int main(void){
     for (i = 0; i < 10; i++) {
         v = (int *) malloc (sizeof (int));
         *v = i;
+        sleep(1);
         pthread_create(&th_writer, NULL, writer, v); 
     }
 
